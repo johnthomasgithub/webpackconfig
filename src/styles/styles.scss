@@ -1,0 +1,418 @@
+* {
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  /* Add more src lines for additional font file formats if desired */
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts//Montserrat-VariableFont_wght.ttf") format("truetype");
+  /* Add more src lines for additional font file formats if desired */
+}
+
+@import url("./login.scss");
+
+.login-parent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  .left {
+    display: flex;
+    width: 40%;
+    color: white;
+    font-size: 72px;
+    background-color: black;
+    font-weight: 700;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .right-items {
+      .head {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .sub-head {
+        font-size: 16px;
+      }
+      .s-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        margin-top: 26px;
+        > div {
+          color: #858585;
+          font-size: 12px;
+          background-color: #ffffff;
+          padding: 6px 8px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width: 180px;
+          cursor: pointer;
+        }
+      }
+      .blue-text {
+        color: #346bd4;
+        font-size: 16px;
+        margin: -5px 0;
+        cursor: pointer;
+      }
+      .register {
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .creds {
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin-top: 25px;
+        padding: 30px;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .fields {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          > input {
+            background-color: #f5f5f5;
+            height: 40px;
+            width: -webkit-fill-available;
+            border: none;
+            border-radius: 10px;
+            padding: 0 16px;
+            outline: none;
+            font-size: 16px;
+          }
+        }
+        .submit {
+          color: #ffffff;
+          width: 100%;
+          height: 40px;
+          background-color: #000000;
+          margin: auto;
+          text-align: center;
+          border-radius: 10px;
+          font-weight: 700;
+          padding: 10px 0px;
+          cursor: pointer;
+        }
+      }
+      .logo {
+        width: 12px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  padding: 40px 30px 40px 40px;
+  gap: 40px;
+  background-color: #dddddd;
+  .routes {
+    border-radius: 30px;
+    padding: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    width: 300px;
+    .help-section {
+      color: #ffffff;
+      margin-top: auto;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .brand {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+  }
+  .link-parent {
+    text-decoration: none;
+    .nav-link {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 158px;
+      .icons {
+        height: 18px;
+        width: 18px;
+        display: flex;
+      }
+      .name {
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 18px;
+      }
+      .bold {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.main-container {
+  width: -webkit-fill-available;
+  padding: 10px 10px 0px 0px;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.header-parent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  .heading {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+  }
+  .search-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    .search {
+      position: relative;
+      .search-input {
+        width: 180px;
+        height: 30px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: #ffffff;
+        color: #b0b0b0;
+        padding: 15px;
+      }
+      .lens {
+        position: absolute;
+        right: 13px;
+        width: 15px;
+        top: 8px;
+      }
+    }
+
+    .noti {
+      display: flex;
+
+      align-items: center;
+    }
+
+    .profile {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      margin-right: 10px;
+      width: 21px;
+      >img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.cards-parent {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 5px;
+  flex: 1;
+  padding: 20px 31px 20px 20px;
+  .icon {
+    width: 20px;
+    height: 24px;
+    margin-left: auto;
+  }
+  .Title {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .value {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+.dash-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .dash-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+  .twoCharts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    > div {
+      // min-width: 40%;
+      // width: 50%;
+    }
+  }
+}
+
+.echarts-for-react {
+  height: 80% !important;
+  // width: 100% !important;
+}
+
+.chart-parent {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  width: -webkit-fill-available;
+  flex-direction: column;
+  .chart-title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .chart-wrapper {
+    width: 100%;
+  }
+  .outer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 10px;
+      border-left: 5px;
+      border-left-style: solid;
+      color: #999999;
+      :first-child {
+        font-weight: 600;
+        font-size: 14px;
+        color: #666666;
+      }
+    }
+  }
+}
+
+.downdown-parent {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #858585;
+  .selectedValue {
+    cursor: pointer;
+  }
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    cursor: pointer;
+    gap: 2px;
+    z-index: 9;
+  }
+}
+
+.underConstruction {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  > svg {
+    width: 200px;
+  }
+
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  /* CSS rules for screens with a maximum width of 600 pixels */
+  .login-parent {
+    flex-direction: column;
+    .left {
+      width: 100%;
+      height: 20vw;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .right-items {
+    width: 87%;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .twoCharts {
+    flex-wrap: wrap !important;
+  }
+}
